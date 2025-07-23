@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title> for my beautiful gorgeous woman</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    }
+    #envelope {
+      cursor: pointer;
+      width: 150px;
+      transition: transform 0.3s;
+      display: block;
+      margin: 30vh auto;
+    }
+    #envelope:hover {
+      transform: scale(1.1);
+    }
+    #popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      color: #333;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.25);
+      text-align: center;
+      max-width: 90%;
+      z-index: 1000;
+    }
+    #popup img {
+      width: 200px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    #popup p {
+      font-size: 1.2em;
+    }
+    body::before {
+      content: "💖 💕 💓 💞 💘";
+      position: fixed;
+      top: -50px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      animation: fall 12s linear infinite;
+      opacity: 0.3;
+      font-size: 2em;
+      pointer-events: none;
+    }
+    @keyframes fall {
+      from { transform: translateY(-100px); }
+      to { transform: translateY(100vh); }
+    }
+  </style>
+</head>
+<body>
+  <img id="envelope" src="https://i.postimg.cc/3J04ZBdP/envelope.png" alt="Open Letter" />
+  <div id="popup">
+    <img src="https://imgur.com/a/xM5rFIg" alt="Us ❤️" />
+    <p>I miss you so so so bad my gorgeous beautiful woman ☹️</p>
+  </div>
+  <audio id="bgm" src="https://archive.org/download/RandomOPM/14.mp3" autoplay loop></audio>
+  <script>
+    document.getElementById("envelope").onclick = () => {
+      document.getElementById("envelope").style.display = "none";
+      document.getElementById("popup").style.display = "block";
+      document.getElementById("bgm").play();
+    };
+  </script>
+</body>
+</html>
